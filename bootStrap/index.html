@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>腾讯热搜游戏</title>
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* 简介 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+		footer{
+			margin-top: 20px;
+		}
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">腾讯热门游戏</a>
+        </div>
+        <div class="navbar-collapse collapse" id="demo-navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#ad-carousel">综述</a></li>
+                <li><a href="#summary-container">简述</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">特点 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" >
+                        <li><a href="#tab-dnf" data-tab="tab-dnf">地下城与勇士</a></li>
+                        <li><a href="#tab-lol" data-tab="tab-lol">英雄联盟</a></li>
+                        <li><a href="#tab-cf" data-tab="tab-cf">穿越火线</a></li>
+                        <li><a href="#tab-qq" data-tab="tab-qq">QQ飞车</a></li>
+                        <li><a href="#tab-soul" data-tab="tab-soul">剑灵</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+    	<!--dnf-->
+        <div class="item active">
+            <img src="img/nanfa.jpg" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>地下城与勇士</h1>
+
+                    <p>《地下城与勇士》(DNF)是一款韩国网络游戏公司NEOPLE开发的免费角色扮演2D游戏，
+                    	由三星电子发行，并于2005年8月在韩国正式发布。中国则由腾讯游戏代理发行。
+                    	该游戏是一款2D卷轴式横版格斗过关网络游戏，大量继承了众多家用机、街机2D格斗游戏的特色。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://dnf.qq.com/web2015/down.shtml"
+                          role="button" target="_blank">点我下载</a></p>
+                </div>
+            </div>
+        </div>
+        <!--lol-->
+        <div class="item">
+            <img src="img/lol.jpg" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>英雄联盟</h1>
+
+                    <p>《英雄联盟》(LOL)是由美国Riot Games公司开发的3D竞技场战网游戏，
+                    	其主创团队是由实力强劲的魔兽争霸系列游戏多人即时对战自定义地图（DOTA-Allstars）的开发团队，
+                    	以及动视暴雪等著名游戏公司的美术、程序、策划人员组成，将DOTA的玩法从对战平台延伸到网络游戏世界。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://lol.qq.com/download.shtml" target="_blank"
+                          role="button">点我下载</a></p>
+                </div>
+            </div>
+        </div>
+        <!--qq飞车-->
+        <div class="item">
+            <img src="img/qqcar.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>QQ飞车</h1>
+
+                    <p>《QQ飞车》是由腾讯琳琅天上游戏工作室开发，腾讯游戏发行的一款网络游戏，
+                    	最高同时在线已超过300万。游戏结合休闲和竞技玩法，是专为QQ用户打造的一款时尚赛车游戏，
+                    	采用了物理引擎PhysX来保证车辆运行时的真实感，给玩家带来流畅的操作手感和驾驶体验。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://speed.qq.com/main.shtml" target="_blank"
+                          role="button">点我下载</a></p>
+                </div>
+            </div>
+        </div>
+        <!--穿越火线-->
+        <div class="item">
+            <img src="img/cs.jpg" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>穿越火线</h1>
+
+                    <p>《穿越火线》（Cross Fire，简称CF）是一款第一人称射击游戏的网络游戏，
+                    	玩家扮演控制一名持枪战斗人员，与其他玩家进行械斗。本游戏由韩国Smile Gate开发，
+                    	在韩国由Neowiz发行，其他国家的发行商需要与Neowiz来和开发商进行商议。该游戏在中国大陆由腾讯公司运营。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://cf.qq.com/web201105/download.shtml" target="_blank"
+                          role="button">点我下载</a></p>
+                </div>
+            </div>
+        </div>
+        <!--剑灵-->
+        <div class="item">
+            <img src="img/soul.jpg" alt="5 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>剑灵</h1>
+
+                    <p>《剑灵》是韩国网络游戏开发商NCSoft开发的3D奇幻大型多人在线动作类游戏，
+                    	中国国内由腾讯代理。该游戏由韩国制作人裴宰贤领衔开发，亚洲插画师金亨泰担纲美术设计，
+                    	日本音乐制作人岩代太郎进行音乐监制。 《剑灵》为玩家展示了东方武侠世界、人物造型、轻功绝学、打斗体验、战斗过程，以及任务情节。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://bns.qq.com/web201506/download.shtml" target="_blank"
+                          role="button">点我下载</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="img/logo_dnf_small.png" alt="dnf">
+
+            <h2>地下城与勇士</h2>
+
+            <p>《地下城与勇士》(DNF)是一款韩国网络游戏公司NEOPLE开发的免费角色扮演2D游戏</p>
+
+            <p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="img/logo_fc_small.png" alt="QQcar">
+
+            <h2>QQ飞车</h2>
+
+            <p>《QQ飞车》是由腾讯琳琅天上游戏工作室开发，腾讯游戏发行的一款网络游戏</p>
+
+            <p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="img/logo_lol_small.jpg" alt="LOL">
+
+            <h2>英雄联盟</h2>
+
+            <p>《英雄联盟》(LOL)是由美国Riot Games公司开发的3D竞技场战网游戏</p>
+
+            <p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+        </div>
+    </div>
+
+    <!-- 特性 -->
+
+    <hr class="feature-divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="tab-list">
+        <li class="active"><a href="#tab-dnf" role="tab" data-toggle="tab">地下城与勇士 </a></li>
+        <li><a href="#tab-lol" role="tab" data-toggle="tab">英雄联盟</a></li>
+        <li><a href="#tab-cf" role="tab" data-toggle="tab">穿越火线</a></li>
+        <li><a href="#tab-qq" role="tab" data-toggle="tab">QQ飞车</a></li>
+        <li><a href="#tab-soul" role="tab" data-toggle="tab">剑灵</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-dnf">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">地下城与勇士 <span
+                            class="text-muted">坑钱很多的游戏</span></h2>
+
+                    <p class="lead">《地下城与勇士》(DNF)是一款韩国网络游戏公司NEOPLE开发的免费角色扮演2D游戏，
+                    	由三星电子发行，并于2005年8月在韩国正式发布。中国则由腾讯游戏代理发行。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="img/logo_dnf_big.jpg"
+                         alt="Chrome">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-lol">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="img/logo_lol_big.jpg"
+                         alt="Firefox">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">英雄联盟 <span class="text-muted">小学生最多的游戏</span>
+                    </h2>
+
+                    <p class="lead">《英雄联盟》(LOL)是由美国Riot Games公司开发的3D竞技场战网游戏，
+                    	其主创团队是由实力强劲的魔兽争霸系列游戏多人即时对战自定义地图（DOTA-Allstars）的开发团队，
+                    	以及动视暴雪等著名游戏公司的美术、程序、策划人员组成，将DOTA的玩法从对战平台延伸到网络游戏世界。</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-cf">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">穿越火线<span class="text-muted">BUG十分多的游戏</span></h2>
+
+                    <p class="lead">穿越火线》（Cross Fire，简称CF）是一款第一人称射击游戏的网络游戏，
+                    	玩家扮演控制一名持枪战斗人员，与其他玩家进行械斗。本游戏由韩国Smile Gate开发，
+                    	在韩国由Neowiz发行，其他国家的发行商需要与Neowiz来和开发商进行商议。该游戏在中国大陆由腾讯公司运营。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="img/logo_cf_big.jpg"
+                         alt="Safari">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-qq">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="img/logo_fc_big.jpg"
+                         alt="Opera">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">QQ飞车<span class="text-muted">充钱都变强不了的游戏</span>
+                    </h2>
+
+                    <p class="lead">《QQ飞车》是由腾讯琳琅天上游戏工作室开发，腾讯游戏发行的一款网络游戏，
+                    	最高同时在线已超过300万。游戏结合休闲和竞技玩法，是专为QQ用户打造的一款时尚赛车游戏，
+                    	采用了物理引擎PhysX来保证车辆运行时的真实感，给玩家带来流畅的操作手感和驾驶体验。.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-soul">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">剑灵<span class="text-muted">超吃配置的游戏</span></h2>
+
+                    <p class="lead">《剑灵》是韩国网络游戏开发商NCSoft开发的3D奇幻大型多人在线动作类游戏，
+                    	中国国内由腾讯代理。该游戏由韩国制作人裴宰贤领衔开发，亚洲插画师金亨泰担纲美术设计，
+                    	日本音乐制作人岩代太郎进行音乐监制。 《剑灵》为玩家展示了东方武侠世界、人物造型、轻功绝学、打斗体验、战斗过程，以及任务情节。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="img/logo_soul_big.jpg"
+                         alt="IE">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">关于</h4>
+                </div>
+                <div class="modal-body">
+                    <p>腾讯游戏！没钱玩你妹！！</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">哦！</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+
+        <p>&copy; 2017 TX游戏</p>
+    </footer>
+
+</div>
+
+<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(document).ready(function(){
+    	$('#demo-navbar .dropdown-menu a').click(function(){
+    		var href=$(this).attr('href');
+    		$("#tab-list a[href='"+href+"']").tab('show');
+    	})
+    })
+</script>
+</body>
+</html>
